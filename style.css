@@ -1,0 +1,111 @@
+/* General reset for margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Default font for the website */
+    height: 100%; /* Ensures the body takes up the full height of the viewport */
+}
+
+/* Main page background and title styling */
+#home {
+    background: url('artwork/IMG_5407.jpeg') no-repeat center center fixed; 
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Style for the main page title */
+h1 {
+    font-family: 'Cursive', cursive; /* Ensure you link this font from Google Fonts if it's not default */
+    font-size: 32px;
+    margin: 0; /* Removes default margin around the h1 */
+}
+
+/* Styles for bio and gallery sections */
+#bio, #gallery {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 20px; /* Slightly larger font size for readability */
+}
+
+/* Gallery images setup */
+#gallery {
+    column-count: 3; /* Three images per row */
+    column-gap: 10px;
+}
+
+#gallery img {
+    width: 100%; /* Full column width */
+    max-width: 300px; /* Maximum width of images */
+    margin-bottom: 10px; /* Space between images */
+    display: block; /* Ensures images are block elements */
+    cursor: pointer; /* Indicates clickable items */
+}
+
+/* Contact section styling */
+#contact {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    text-align: center; /* Center text within the contact section */
+}
+
+#contact h2 {
+    color: #333; /* Dark grey for heading */
+}
+
+#contact p {
+    color: #666; /* Medium grey for text */
+    max-width: 800px; /* Max width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position to stay in place */
+    z-index: 1000; /* High z-index to stay on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if necessary */
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+}
+
+/* Modal content styling */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Adjust as necessary */
+    max-width: 700px; /* Max width */
+    animation: zoom 0.6s; /* Zoom animation for the modal */
+}
+
+/* Close button in the modal */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Animation for the modal zoom effect */
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Modal caption */
+#caption {
+    color: #ccc;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+}

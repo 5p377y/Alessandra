@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandra Sperry's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <h1>Alessandra Sperry</h1>
+    </div>
+    <div id="bio">
+        <h2>Bio</h2>
+        <p>Hello! My name is Alessandra Sperry, a 23-year-old artist from Guilford, Connecticut. My work is inspired by the beauty of my coastal hometown and my love for bold, expressive art. I specialize in creating contemporary and abstract pieces but am always excited to collaborate on custom projects. Let’s work together to bring your vision to life!</p>
+    </div>
+    <div id="gallery">
+        <h2>Gallery</h2>
+        <p>Here is a look at some of my previous pieces!</p>
+        <img src="artwork/IMG_5406.jpeg" alt="" onclick="openModal(this.src, this.alt)">
+        <img src="artwork/IMG_5407.jpeg" alt="" onclick="openModal(this.src, this.alt)">
+        <img src="artwork/IMG_5408.jpeg" alt="" onclick="openModal(this.src, this.alt)">
+        <img src="artwork/IMG_5409.jpeg" alt="" onclick="openModal(this.src, this.alt)">
+        <img src="artwork/IMG_5410.jpeg" alt="" onclick="openModal(this.src, this.alt)">
+    </div>
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>To inquire about custom pieces, or anything from the gallery, please contact me at (203) 349-1104.</p>
+    </div>
+    <!-- Modal section -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+    <script>
+        // JavaScript for Modal Image Gallery
+        function openModal(src, alt) {
+            document.getElementById('myModal').style.display = "block";
+            document.getElementById('modalImage').src = src;
+            document.getElementById('caption').textContent = alt;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+    </script>
+</body>
+</html>
